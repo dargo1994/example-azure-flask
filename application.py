@@ -2,7 +2,7 @@ from flask import Flask, request, abort
 app = Flask(__name__)
 
 
-@app.route("/webhook")
+@app.route("/webhook", method='[POST]')
 def webhook():
     if request.method == 'POST':
         print(request.json)
